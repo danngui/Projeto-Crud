@@ -124,6 +124,7 @@ body{
   width:15px;
   height:15px;
   object-fit:contain;
+    filter: brightness(0) saturate(100%) invert(20%) sepia(94%) saturate(1925%) hue-rotate(221deg) brightness(91%) contrast(101%);
 }
 
 .delete img{
