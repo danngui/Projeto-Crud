@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <!-- FALTOU O .css -->
+  <link rel="stylesheet" href="scripts/script_dashboard.css">
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <aside class="sidebar">
+
+      <div class="sidebar-mini">
+
+        <div class="top-mini">
+
+          <div class="logo">
+            <img src="icons/windows-logo.png" alt="">
+          </div>
+
+          <div class="icon-group">
+
+            <div class="icon">
+              <img src="icons/graph.png" alt="">
+            </div>
+
+            <div class="icon">
+              <img src="icons/folder.png" alt="">
+            </div>
+
+            <div class="icon">
+              <img src="icons/dashboard-interface.png" alt="">
+            </div>
+
+          </div>
+        </div>
+
+        <div class="icon-group">
+
+          <div class="icon">
+            <img src="icons/pulse.png" alt="">
+          </div>
+
+          <div class="icon">
+            <img src="icons/bell.png" alt="">
+          </div>
+
+          <div class="icon active">
+            <img src="icons/settings.png" alt="">
+          </div>
+
+          <div class="icon">
+            <img src="icons/question.png" alt="">
+          </div>
+
+          <div class="icon">
+            <img src="icons/user-circle.png" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="sidebar-content">
+
+        <div class="menu-btn">
+          <img src="icons/button.png" alt="">
+        </div>
+
+        <div class="nav">
+
+          <div class="nav-item active">
+
+            <img src="icons/users.png" class="menu-icon" alt="">
+            <span>User Management</span>
+
+          </div>
+
+          <div class="nav-item">
+
+            <img src="icons/dashboard-interface.png" class="menu-icon" alt="">
+            <span>Cost Dashboard</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+    <main class="main">
+
+      <div class="topbar">
+        <h1 class="title">Admin Dashboard</h1>
+      </div>
+
+      <div class="actions">
+
+        <button class="new-user">
+
+          <img src="icons/plus.png" class="button-icon" alt="">
+          New User
+
+        </button>
+
+        <div class="search-area">
+
+          <div class="search-box">
+
+            <input type="text" placeholder="Search for User">
+
+            <img src="icons/magnifying-glass.png" class="search-icon" alt="">
+
+          </div>
+
+          <div class="filter">
+            <img src="icons/arrows-up-down.png" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="tag-row">
+
+        <div class="tag">
+
+          Active
+
+          <img src="icons/close.png" class="tag-icon" alt="">
+
+        </div>
+
+        <div class="delete">
+          <img src="icons/trash.png" alt="">
+        </div>
+
+      </div>
+
+      <div class="table-container">
+
+        <table>
+
+          <thead>
+            <tr>
+              <th>
+                <div class="th-content">
+                  Name
+                  <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+                </div>
+              </th>
+
+              <th>
+                <div class="th-content">
+                  Email
+                  <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+                </div>
+              </th>
+
+              <th>
+                <div class="th-content">
+                  Status
+                  <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+                </div>
+              </th>
+
+              <th>
+                <div class="th-content">
+                  Date Added
+                  <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+                </div>
+              </th>
+
+              <th>Action</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td>
+                <div class="user">
+                  <div class="avatar">H</div>
+                  Usuário 1
+                </div>
+              </td>
+
+              <td>usuario@gmail.com</td>
+              <td class="status">Active</td>
+              <td>Jan 10, 2022</td>
+
+              <td class="dots">
+                <img src="icons/dots.png" alt="">
+              </td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </main>
+
+    <div class="floating-help">
+      <img src="icons/question-mark.png" alt="">
+    </div>
+
+  </div>
+
+</body>
+
+</html>
