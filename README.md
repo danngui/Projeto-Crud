@@ -4,7 +4,7 @@ Sistema desenvolvido para automatizar e facilitar o gerenciamento de usuários e
 
 ---
 
-## 🚀 Funcionalidades
+## Funcionalidades
 
 - Cadastro de usuários
 - Edição e exclusão de usuários
@@ -19,45 +19,15 @@ Sistema desenvolvido para automatizar e facilitar o gerenciamento de usuários e
 
 ---
 
-## 🎯 Objetivo
+## Objetivo
 
 Proporcionar uma aplicação CRUD completa para praticar e demonstrar conceitos de desenvolvimento web, permitindo o gerenciamento eficiente de usuários e produtos em uma interface intuitiva, organizada e funcional.
 
 ---
 
-## 🛠️ Tecnologias Utilizadas
+## Tecnologias Utilizadas
 
-- HTML5
-- CSS3
+- HTML
+- CSS
 - JavaScript
 - MySQL
-
----
-
-## 📁 Estrutura do Projeto
-
-```bash
-PROJETO-CRUD/
-│
-├── back-end/
-├── front-end/
-│
-├── icons/
-├── img/
-│
-├── scripts/
-│   ├── script_dashboard.js
-│   ├── script_home.js
-│   └── script_products.js
-│
-├── style_dashboard.css
-├── style_home.css
-├── style_products.css
-│
-├── dashboard.html
-├── home.html
-├── notifications.html
-├── products.html
-├── usuario.html
-│
-└── README.md
