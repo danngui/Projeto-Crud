@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Lista de Produtos</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="scripts/style_products.css">
+
+</head>
+
+<body>
+
+<div class="wrapper">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+
+    <div class="sidebar-mini">
+
+      <div class="top-mini">
+
+        <div class="logo">
+
+          <img src="icons/windows-logo.png" alt="">
+
+        </div>
+
+        <div class="icon-group">
+
+          <div class="icon">
+
+            <img src="icons/graph.png" alt="">
+
+          </div>
+
+          <div class="icon active" onclick="window.location.href='lista.html'">
+
+            <img src="icons/dashboard-interface.png" alt="">
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="icon-group">
+
+        <div class="icon">
+
+          <img src="icons/pulse.png" alt="">
+
+        </div>
+
+        <div class="icon">
+
+          <img src="icons/bell.png" alt="">
+
+        </div>
+
+        <div class="icon">
+
+          <img src="icons/settings.png" alt="">
+
+        </div>
+
+        <div class="icon">
+
+          <img src="icons/question.png" alt="">
+
+        </div>
+
+        <div class="icon">
+
+          <img src="icons/user-circle.png" alt="">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <div class="sidebar-content">
+
+      <div class="menu-btn">
+
+        <img src="icons/button.png" alt="">
+
+      </div>
+
+      <div class="nav">
+
+        <div class="nav-item active">
+
+          <img src="icons/dashboard-interface.png" class="menu-icon" alt="">
+
+          <span>Lista de Produtos</span>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </aside>
+
+  <!-- MAIN -->
+  <main class="main">
+
+    <div class="topbar">
+
+      <h1 class="title">
+        Lista de Produtos
+      </h1>
+
+    </div>
+
+    <!-- SEARCH -->
+    <div class="actions">
+
+      <div class="search-area">
+
+        <div class="search-box">
+
+          <input type="text" placeholder="Pesquisar produto">
+
+          <img src="icons/magnifying-glass.png" class="search-icon" alt="">
+
+        </div>
+
+      </div>
+
+    </div>
+
+    <!-- PRODUCTS GRID -->
+    <div class="products-grid">
+
+      <!-- CARD -->
+      <div class="store-product-card">
+
+        <div class="store-product-image">
+
+          <img src="img/sorvete.jpg" alt="">
+
+        </div>
+
+        <div class="store-product-content">
+
+          <div class="store-product-top">
+
+            <h3>Sorvete</h3>
+
+            <span class="product-category">
+              Sobremesa
+            </span>
+
+          </div>
+
+          <p class="product-description">
+            Sorvete premium sabor chocolate.
+          </p>
+
+          <div class="product-price">
+            R$ 5,00
+          </div>
+
+          <div class="product-stock">
+            Estoque: 52
+          </div>
+
+          <div class="store-product-actions">
+
+            <button class="buy-btn">
+              Comprar
+            </button>
+
+            <button class="details-btn">
+              Detalhes
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="store-product-card">
+
+        <div class="store-product-image">
+
+          <img src="img/hamburguer.png" alt="">
+
+        </div>
+
+        <div class="store-product-content">
+
+          <div class="store-product-top">
+
+            <h3>Burger</h3>
+
+            <span class="product-category">
+              Lanche
+            </span>
+
+          </div>
+
+          <p class="product-description">
+            Hambúrguer artesanal completo.
+          </p>
+
+          <div class="product-price">
+            R$ 22,90
+          </div>
+
+          <div class="product-stock">
+            Estoque: 18
+          </div>
+
+          <div class="store-product-actions">
+
+            <button class="buy-btn">
+              Comprar
+            </button>
+
+            <button class="details-btn">
+              Detalhes
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <!-- CARD -->
+      <div class="store-product-card">
+
+        <div class="store-product-image">
+
+          <img src="img/pizza.png" alt="">
+
+        </div>
+
+        <div class="store-product-content">
+
+          <div class="store-product-top">
+
+            <h3>Pizza</h3>
+
+            <span class="product-category">
+              Jantar
+            </span>
+
+          </div>
+
+          <p class="product-description">
+            Pizza grande quatro queijos.
+          </p>
+
+          <div class="product-price">
+            R$ 49,90
+          </div>
+
+          <div class="product-stock">
+            Estoque: 9
+          </div>
+
+          <div class="store-product-actions">
+
+            <button class="buy-btn">
+              Comprar
+            </button>
+
+            <button class="details-btn">
+              Detalhes
+            </button>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </main>
+
+</div>
+
+</body>
+
+</html>
