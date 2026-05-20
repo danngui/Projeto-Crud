@@ -1,40 +1,279 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro de Cliente</title>
-    <link rel="stylesheet" href="scripts/script_home.css">
+
+  <!-- Meta -->
+  <meta charset="UTF-8" />
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  />
+
+  <!-- Título -->
+  <title>Autenticação</title>
+
+  <!-- Font Awesome -->
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+  />
+
+  <!-- CSS -->
+  <link
+    rel="stylesheet"
+    href="scripts/style_home.css"
+  />
+
 </head>
+
 <body>
 
-    <div class="cadastro-container">
-        <h2>Criar Conta</h2>
-        <p>Seja bem-vindo! Preencha os campos abaixo para se cadastrar.</p>
+  <!-- =========================
+       CADASTRO
+  ========================== -->
 
-        <form action="#" method="POST">
-            <div class="input-group">
-                <label for="nome">Nome Completo</label>
-                <input type="text" id="nome" name="nome" placeholder="Digite seu nome" required>
-            </div>
+  <main class="cadastro-container" id="cadastroBox">
 
-            <div class="input-group">
-                <label for="email">E-mail</label>
-                <input type="email" id="email" name="email" placeholder="seu-email@exemplo.com" required>
-            </div>
+    <!-- Header -->
+    <div class="header">
 
-            <div class="input-group">
-                <label for="senha">Senha</label>
-                <input type="password" id="senha" name="senha" placeholder="Crie uma senha forte" required>
-            </div>
+      <h1>Criar Conta</h1>
 
-            <button type="submit" class="btn-cadastrar">Cadastrar</button>
-        </form>
+      <p>
+        Seja bem-vindo! Preencha os campos abaixo
+        para se cadastrar.
+      </p>
 
-        <div class="footer-link">
-            Já tem uma conta? <a href="#">Faça login</a>
-        </div>
     </div>
 
+    <!-- Formulário -->
+    <form
+      action="#"
+      method="POST"
+      class="formulario"
+    >
+
+      <!-- Nome -->
+      <div class="input-group">
+
+        <label for="nome">
+          Nome Completo
+        </label>
+
+        <div class="input-wrapper">
+
+          <i class="fa-regular fa-user"></i>
+
+          <input
+            type="text"
+            id="nome"
+            name="nome"
+            placeholder="Digite seu nome"
+            required
+          />
+
+        </div>
+
+      </div>
+
+      <!-- E-mail -->
+      <div class="input-group">
+
+        <label for="email">
+          E-mail
+        </label>
+
+        <div class="input-wrapper">
+
+          <i class="fa-regular fa-envelope"></i>
+
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="seu-email@exemplo.com"
+            required
+          />
+
+        </div>
+
+      </div>
+
+      <!-- Senha -->
+      <div class="input-group">
+
+        <label for="senha">
+          Senha
+        </label>
+
+        <div class="input-wrapper">
+
+          <i class="fa-solid fa-lock"></i>
+
+          <input
+            type="password"
+            id="senha"
+            name="senha"
+            placeholder="Crie uma senha forte"
+            required
+          />
+
+          <!-- Mostrar senha -->
+          <button
+            type="button"
+            class="toggle-password"
+            id="toggleSenha"
+          >
+            <i class="fa-regular fa-eye"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Botão -->
+      <button
+        type="submit"
+        class="btn-cadastrar"
+      >
+        Cadastrar
+      </button>
+
+    </form>
+
+    <!-- Footer -->
+    <div class="footer-link">
+
+      <span>
+        Já tem uma conta?
+      </span>
+
+      <a
+        href="#"
+        id="openLogin"
+      >
+        Faça login
+      </a>
+
+    </div>
+
+  </main>
+
+  <!-- =========================
+       LOGIN
+  ========================== -->
+
+  <main
+    class="cadastro-container login-box"
+    id="loginBox"
+  >
+
+    <!-- Header -->
+    <div class="header">
+
+      <h1>Fazer Login</h1>
+
+      <p>
+        Entre com sua conta para continuar.
+      </p>
+
+    </div>
+
+    <!-- Formulário -->
+    <form
+      action="#"
+      method="POST"
+      class="formulario"
+    >
+
+      <!-- E-mail -->
+      <div class="input-group">
+
+        <label for="login-email">
+          E-mail
+        </label>
+
+        <div class="input-wrapper">
+
+          <i class="fa-regular fa-envelope"></i>
+
+          <input
+            type="email"
+            id="login-email"
+            name="login-email"
+            placeholder="Digite seu e-mail"
+            required
+          />
+
+        </div>
+
+      </div>
+
+      <!-- Senha -->
+      <div class="input-group">
+
+        <label for="login-senha">
+          Senha
+        </label>
+
+        <div class="input-wrapper">
+
+          <i class="fa-solid fa-lock"></i>
+
+          <input
+            type="password"
+            id="login-senha"
+            name="login-senha"
+            placeholder="Digite sua senha"
+            required
+          />
+
+          <!-- Mostrar senha -->
+          <button
+            type="button"
+            class="toggle-password"
+            id="toggleLoginSenha"
+          >
+            <i class="fa-regular fa-eye"></i>
+          </button>
+
+        </div>
+
+      </div>
+
+      <!-- Botão -->
+      <button
+        type="submit"
+        class="btn-cadastrar"
+      >
+        Entrar
+      </button>
+
+    </form>
+
+    <!-- Footer -->
+    <div class="footer-link">
+
+      <span>
+        Não possui uma conta?
+      </span>
+
+      <a
+        href="#"
+        id="openCadastro"
+      >
+        Criar conta
+      </a>
+
+    </div>
+
+  </main>
+
+  <!-- JavaScript -->
+  <script src="scripts/script_home.js"></script>
+
 </body>
+
 </html>

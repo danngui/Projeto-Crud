@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Admin Dashboard</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="scripts/style_products.css">
+
+</head>
+
+<!-- OVERLAY -->
+<div class="modal-overlay" id="modalOverlay"></div>
+
+<!-- MODAL NEW PRODUCT -->
+<div class="new-user-modal" id="newUserModal">
+
+  <div class="modal-header">
+
+    <h2>Novo Produto</h2>
+
+    <button class="close-modal" id="closeModal">
+
+      <img src="icons/close.png" alt="">
+
+    </button>
+
+  </div>
+
+  <div class="modal-body">
+
+    <p class="modal-description">
+      Gerencie os produtos e estoque aqui.
+    </p>
+
+    <div class="input-group">
+
+      <label>Nome do Produto</label>
+
+      <input type="text" placeholder="Produto Premium">
+
+    </div>
+
+    <div class="input-group">
+
+      <label>Categoria</label>
+
+      <div class="select-wrapper">
+
+        <select>
+
+          <option>Software</option>
+          <option>Games</option>
+          <option>Assinatura</option>
+          <option>Outros</option>
+
+        </select>
+
+      </div>
+
+    </div>
+
+    <div class="input-group">
+
+      <label>Preço</label>
+
+      <input type="text" placeholder="R$ 99,90">
+
+    </div>
+
+    <div class="input-group">
+
+      <label>Quantidade em Estoque</label>
+
+      <input type="number" placeholder="50">
+
+    </div>
+
+    <div class="modal-actions">
+
+      <button class="create-user-btn">
+        Criar Produto
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+  <div class="wrapper">
+
+    <aside class="sidebar">
+
+      <div class="sidebar-mini">
+
+        <div class="top-mini">
+
+          <div class="logo">
+
+            <img src="icons/windows-logo.png" alt="">
+
+          </div>
+
+          <div class="icon-group">
+
+            <div class="icon">
+
+              <img src="icons/graph.png" alt="">
+
+            </div>
+
+            <div class="icon">
+
+              <img src="icons/folder.png" alt="">
+
+            </div>
+
+            <div class="icon">
+
+              <img src="icons/dashboard-interface.png" alt="">
+
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="icon-group">
+
+          <div class="icon">
+
+            <img src="icons/pulse.png" alt="">
+
+          </div>
+
+          <div class="icon" onclick="window.location.href='notifications.html'">
+
+            <img src="icons/bell.png" alt="">
+
+          </div>
+
+          <div class="icon active">
+
+            <img src="icons/settings.png" alt="">
+
+          </div>
+
+          <div class="icon">
+
+            <img src="icons/question.png" alt="">
+
+          </div>
+
+          <div class="icon" onclick="window.location.href='usuario.html'">
+
+            <img src="icons/user-circle.png" alt="">
+
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="sidebar-content">
+
+        <div class="menu-btn">
+
+          <img src="icons/button.png" alt="">
+
+        </div>
+
+        <div class="nav">
+
+          <div class="nav-item" onclick="window.location.href='dashboard.html'">
+
+            <img src="icons/users.png" class="menu-icon" alt="">
+
+            <span>Gerenciar Usuários</span>
+
+          </div>
+
+          <div class="nav-item active" onclick="window.location.href='products.html'">
+
+            <img src="icons/dashboard-interface.png" class="menu-icon" alt="">
+
+            <span>Gerenciar Produtos</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+<main class="main">
+
+  <div class="topbar">
+
+    <h1 class="title">
+      Gerenciar Produtos
+    </h1>
+
+  </div>
+
+  <div class="actions">
+
+    <button class="new-user">
+
+      <img src="icons/plus.png" class="button-icon" alt="">
+
+      Novo Produto
+
+    </button>
+
+    <div class="search-area">
+
+      <div class="search-box">
+
+        <input type="text" placeholder="Pesquisar Produto">
+
+        <img src="icons/magnifying-glass.png" class="search-icon" alt="">
+
+      </div>
+
+      <div class="filter">
+
+        <img src="icons/arrows-up-down.png" alt="">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <!-- CARDS -->
+  <div class="products-stats">
+
+    <div class="product-card">
+
+      <div class="product-card-top">
+
+        <span>Total Produtos</span>
+
+        <img src="icons/dashboard-interface.png" alt="">
+
+      </div>
+
+      <h2>124</h2>
+
+    </div>
+
+    <div class="product-card">
+
+      <div class="product-card-top">
+
+        <span>Produtos Ativos</span>
+
+        <img src="icons/pulse.png" alt="">
+
+      </div>
+
+      <h2>98</h2>
+
+    </div>
+
+    <div class="product-card">
+
+      <div class="product-card-top">
+
+        <span>Sem Estoque</span>
+
+        <img src="icons/close.png" alt="">
+
+      </div>
+
+      <h2>12</h2>
+
+    </div>
+
+  </div>
+
+  <!-- TABELA -->
+  <div class="table-container">
+
+    <table>
+
+      <thead>
+
+        <tr>
+
+          <th>
+
+            <div class="th-content">
+
+              Produto
+
+              <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+
+            </div>
+
+          </th>
+
+          <th>
+
+            <div class="th-content">
+
+              Categoria
+
+              <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+
+            </div>
+
+          </th>
+
+          <th>
+
+            <div class="th-content">
+
+              Preço
+
+              <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+
+            </div>
+
+          </th>
+
+          <th>
+
+            <div class="th-content">
+
+              Estoque
+
+              <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+
+            </div>
+
+          </th>
+
+          <th>Status</th>
+
+          <th>Ação</th>
+
+        </tr>
+
+      </thead>
+
+      <tbody>
+
+        <tr>
+
+          <td>
+
+            <div class="user">
+
+              <div class="avatar">
+                P
+              </div>
+
+              Produto Premium
+
+            </div>
+
+          </td>
+
+          <td>Software</td>
+
+          <td>R$ 149,90</td>
+
+          <td>52</td>
+
+          <td class="status">
+            Ativo
+          </td>
+
+          <td class="dots">
+
+            <img src="icons/dots.png" class="dots-icon" alt="">
+
+            <div class="action-menu">
+
+              <button class="action-item">
+                Editar
+              </button>
+
+              <button class="action-item">
+                Deletar
+              </button>
+
+            </div>
+
+          </td>
+
+        </tr>
+
+        <tr>
+
+          <td>
+
+            <div class="user">
+
+              <div class="avatar">
+                G
+              </div>
+
+              Game Pass
+
+            </div>
+
+          </td>
+
+          <td>Games</td>
+
+          <td>R$ 59,90</td>
+
+          <td>0</td>
+
+          <td class="status" style="color:#dc2626;">
+            Sem Estoque
+          </td>
+
+          <td class="dots">
+
+            <img src="icons/dots.png" class="dots-icon" alt="">
+
+            <div class="action-menu">
+
+              <button class="action-item">
+                Editar
+              </button>
+
+              <button class="action-item">
+                Deletar
+              </button>
+
+            </div>
+
+          </td>
+
+        </tr>
+
+      </tbody>
+
+    </table>
+
+  </div>
+
+</main>
+
+    <div class="floating-help">
+
+      <img src="icons/question-mark.png" alt="">
+
+    </div>
+
+  </div>
+
+  <script src="scripts/script_dashboard.js"></script>
+
+</body>
+
+</html>

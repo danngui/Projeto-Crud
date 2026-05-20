@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Notificações</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="scripts/style_dashboard.css">
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+
+      <div class="sidebar-mini">
+
+        <div class="top-mini">
+
+          <div class="logo">
+            <img src="icons/windows-logo.png" alt="">
+          </div>
+
+          <div class="icon-group">
+
+            <div class="icon">
+              <img src="icons/graph.png" alt="">
+            </div>
+
+            <div class="icon">
+              <img src="icons/folder.png" alt="">
+            </div>
+
+            <div class="icon">
+              <img src="icons/dashboard-interface.png" alt="">
+            </div>
+
+          </div>
+
+        </div>
+
+        <div class="icon-group">
+
+          <div class="icon">
+            <img src="icons/pulse.png" alt="">
+          </div>
+
+          <!-- NOTIFICAÇÕES ATIVO -->
+          <div class="icon active">
+            <img src="icons/bell.png" alt="">
+          </div>
+
+          <div class="icon" onclick="window.location.href='dashboard.html'">
+            <img src="icons/settings.png" alt="">
+          </div>
+
+          <div class="icon">
+            <img src="icons/question.png" alt="">
+          </div>
+
+          <div class="icon">
+            <img src="icons/user-circle.png" alt="">
+          </div>
+
+        </div>
+
+      </div>
+
+      <div class="sidebar-content">
+
+        <div class="menu-btn">
+          <img src="icons/button.png" alt="">
+        </div>
+
+        <div class="nav">
+
+          <div class="nav-item active">
+            <img src="icons/bell.png" class="menu-icon" alt="">
+            <span>Notificações</span>
+          </div>
+
+        </div>
+
+      </div>
+
+    </aside>
+
+    <!-- MAIN -->
+    <main class="main">
+
+      <div class="topbar">
+        <h1 class="title">Notificações</h1>
+      </div>
+
+      <!-- LISTA DE NOTIFICAÇÕES -->
+      <div class="table-container">
+
+        <div class="notifications">
+
+          <!-- ITEM -->
+          <div class="notification-item">
+
+            <div class="notification-left">
+
+              <div class="notification-dot"></div>
+
+              <div class="notification-text">
+                <h3>Novo usuário criado</h3>
+                <p>Um novo usuário foi adicionado ao sistema.</p>
+              </div>
+
+            </div>
+
+            <span class="notification-time">Agora</span>
+
+          </div>
+
+          <!-- ITEM -->
+          <div class="notification-item">
+
+            <div class="notification-left">
+
+              <div class="notification-dot read"></div>
+
+              <div class="notification-text">
+                <h3>Atualização do sistema</h3>
+                <p>O sistema foi atualizado com melhorias de desempenho.</p>
+              </div>
+
+            </div>
+
+            <span class="notification-time">2h atrás</span>
+
+          </div>
+
+          <!-- ITEM -->
+          <div class="notification-item">
+
+            <div class="notification-left">
+
+              <div class="notification-dot read"></div>
+
+              <div class="notification-text">
+                <h3>Login suspeito</h3>
+                <p>Detectamos um acesso fora do padrão no sistema.</p>
+              </div>
+
+            </div>
+
+            <span class="notification-time">Ontem</span>
+
+          </div>
+
+          <!-- ITEM -->
+          <div class="notification-item">
+
+            <div class="notification-left">
+
+              <div class="notification-dot read"></div>
+
+              <div class="notification-text">
+                <h3>Backup concluído</h3>
+                <p>Backup automático realizado com sucesso.</p>
+              </div>
+
+            </div>
+
+            <span class="notification-time">2 dias atrás</span>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </main>
+
+  </div>
+
+</body>
+
+</html>

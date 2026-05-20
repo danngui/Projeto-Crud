@@ -2,18 +2,100 @@
 <html lang="pt-BR">
 
 <head>
+
   <meta charset="UTF-8" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <title>Admin Dashboard</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
+
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
-  <!-- FALTOU O .css -->
-  <link rel="stylesheet" href="scripts/script_dashboard.css">
+  <link rel="stylesheet" href="scripts/style_dashboard.css">
+
 </head>
 
 <body>
+
+  <!-- OVERLAY -->
+  <div class="modal-overlay" id="modalOverlay"></div>
+
+  <!-- MODAL NEW USER -->
+  <div class="new-user-modal" id="newUserModal">
+
+    <div class="modal-header">
+
+      <h2>Novo Usuário</h2>
+
+      <button class="close-modal" id="closeModal">
+
+        <img src="icons/close.png" alt="">
+
+      </button>
+
+    </div>
+
+    <div class="modal-body">
+
+      <p class="modal-description">
+        Gerencie os usuários e funções aqui.
+      </p>
+
+      <div class="input-group">
+
+        <label>Nome</label>
+
+        <input type="text" placeholder="Daniel">
+
+      </div>
+
+      <div class="input-group">
+
+        <label>Sobrenome</label>
+
+        <input type="text" placeholder="Guilherme">
+
+      </div>
+
+      <div class="input-group">
+
+        <label>Email</label>
+
+        <input type="email" placeholder="daniel.guilherme@exemplo.com">
+
+      </div>
+
+      <div class="input-group">
+
+        <label>Cargo</label>
+
+        <div class="select-wrapper">
+
+          <select>
+
+            <option>Usuário</option>
+            <option>Admin</option>
+            <option>Moderador</option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+      <div class="modal-actions">
+
+        <button class="create-user-btn">
+          Criar Usuário
+        </button>
+
+      </div>
+
+    </div>
+
+  </div>
 
   <div class="wrapper">
 
@@ -24,46 +106,64 @@
         <div class="top-mini">
 
           <div class="logo">
+
             <img src="icons/windows-logo.png" alt="">
+
           </div>
 
           <div class="icon-group">
 
             <div class="icon">
+
               <img src="icons/graph.png" alt="">
+
             </div>
 
             <div class="icon">
+
               <img src="icons/folder.png" alt="">
+
             </div>
 
             <div class="icon">
+
               <img src="icons/dashboard-interface.png" alt="">
+
             </div>
 
           </div>
+
         </div>
 
         <div class="icon-group">
 
           <div class="icon">
+
             <img src="icons/pulse.png" alt="">
+
           </div>
 
-          <div class="icon">
+          <div class="icon" onclick="window.location.href='notifications.html'">
             <img src="icons/bell.png" alt="">
           </div>
 
           <div class="icon active">
+
             <img src="icons/settings.png" alt="">
+
           </div>
 
           <div class="icon">
+
             <img src="icons/question.png" alt="">
+
           </div>
 
-          <div class="icon">
+
+          <div class="icon" onclick="window.location.href='usuario.html'">
+
             <img src="icons/user-circle.png" alt="">
+
           </div>
 
         </div>
@@ -73,7 +173,9 @@
       <div class="sidebar-content">
 
         <div class="menu-btn">
+
           <img src="icons/button.png" alt="">
+
         </div>
 
         <div class="nav">
@@ -81,14 +183,16 @@
           <div class="nav-item active">
 
             <img src="icons/users.png" class="menu-icon" alt="">
-            <span>User Management</span>
+
+            <span>Gerenciar Usuários</span>
 
           </div>
 
-          <div class="nav-item">
+          <div class="nav-item" onclick="window.location.href='products.html'">
 
             <img src="icons/dashboard-interface.png" class="menu-icon" alt="">
-            <span>Cost Dashboard</span>
+
+            <span>Gerenciar Produtos</span>
 
           </div>
 
@@ -101,7 +205,11 @@
     <main class="main">
 
       <div class="topbar">
-        <h1 class="title">Admin Dashboard</h1>
+
+        <h1 class="title">
+          Admin Dashboard
+        </h1>
+
       </div>
 
       <div class="actions">
@@ -109,7 +217,8 @@
         <button class="new-user">
 
           <img src="icons/plus.png" class="button-icon" alt="">
-          New User
+
+          Novo Usuário
 
         </button>
 
@@ -117,14 +226,16 @@
 
           <div class="search-box">
 
-            <input type="text" placeholder="Search for User">
+            <input type="text" placeholder="Pesquisar Usuário">
 
             <img src="icons/magnifying-glass.png" class="search-icon" alt="">
 
           </div>
 
           <div class="filter">
+
             <img src="icons/arrows-up-down.png" alt="">
+
           </div>
 
         </div>
@@ -142,7 +253,9 @@
         </div>
 
         <div class="delete">
+
           <img src="icons/trash.png" alt="">
+
         </div>
 
       </div>
@@ -152,56 +265,107 @@
         <table>
 
           <thead>
+
             <tr>
+
               <th>
+
                 <div class="th-content">
-                  Name
+
+                  Nome
+
                   <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+
                 </div>
+
               </th>
 
               <th>
+
                 <div class="th-content">
+
                   Email
+
                   <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+
                 </div>
+
               </th>
 
               <th>
+
                 <div class="th-content">
+
                   Status
+
                   <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+
                 </div>
+
               </th>
 
               <th>
+
                 <div class="th-content">
-                  Date Added
+
+                  Data da Criação
+
                   <img src="icons/arrows-up-down.png" class="th-icon" alt="">
+
                 </div>
+
               </th>
 
-              <th>Action</th>
+              <th>Ação</th>
+
             </tr>
+
           </thead>
 
           <tbody>
 
             <tr>
+
               <td>
+
                 <div class="user">
-                  <div class="avatar">H</div>
+
+                  <div class="avatar">
+                    H
+                  </div>
+
                   Usuário 1
+
                 </div>
+
               </td>
 
               <td>usuario@gmail.com</td>
-              <td class="status">Active</td>
+
+              <td class="status">
+                Ativo
+              </td>
+
               <td>Jan 10, 2022</td>
 
               <td class="dots">
-                <img src="icons/dots.png" alt="">
+
+                <img src="icons/dots.png" class="dots-icon" alt="">
+
+                <div class="action-menu">
+
+                  <button class="action-item">
+                    Editar
+                  </button>
+
+                  <button class="action-item">
+                    Deletar
+                  </button>
+
+                </div>
+
               </td>
+
             </tr>
 
           </tbody>
@@ -213,10 +377,14 @@
     </main>
 
     <div class="floating-help">
+
       <img src="icons/question-mark.png" alt="">
+
     </div>
 
   </div>
+
+  <script src="scripts/script_dashboard.js"></script>
 
 </body>
 

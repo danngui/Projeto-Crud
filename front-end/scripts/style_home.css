@@ -1,0 +1,345 @@
+/* =========================
+   RESET
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* =========================
+   BODY
+========================= */
+
+body {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 24px;
+
+  background: #f8fafc;
+
+  font-family:
+    "Segoe UI",
+    Tahoma,
+    Geneva,
+    Verdana,
+    sans-serif;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.cadastro-container {
+  width: 100%;
+  max-width: 460px;
+
+  padding: 42px;
+
+  background: #ffffff;
+
+  border-radius: 18px;
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.header h1 {
+  margin-bottom: 12px;
+
+  color: #0f172a;
+
+  font-size: 34px;
+  font-weight: 700;
+}
+
+.header p {
+  color: #64748b;
+
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* =========================
+   FORM
+========================= */
+
+.formulario {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* =========================
+   INPUT GROUP
+========================= */
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-group label {
+  margin-bottom: 8px;
+
+  color: #1e293b;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* =========================
+   INPUT WRAPPER
+========================= */
+
+.input-wrapper {
+  position: relative;
+
+  display: flex;
+  align-items: center;
+}
+
+/* =========================
+   INPUT ICONS
+========================= */
+
+.input-wrapper > i {
+  position: absolute;
+
+  left: 16px;
+
+  color: #94a3b8;
+
+  font-size: 15px;
+
+  pointer-events: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Focus icon */
+
+.input-wrapper:focus-within > i {
+  color: #1677ff;
+
+  transform: scale(1.05);
+}
+
+/* =========================
+   INPUT
+========================= */
+
+.input-wrapper input {
+  width: 100%;
+
+  padding:
+    14px
+    48px
+    14px
+    46px;
+
+  border: 1px solid #dbe2ea;
+  border-radius: 10px;
+
+  background: #f8fafc;
+
+  color: #0f172a;
+
+  font-size: 15px;
+
+  outline: none;
+
+  transition:
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* Placeholder */
+
+.input-wrapper input::placeholder {
+  color: #94a3b8;
+}
+
+/* Focus */
+
+.input-wrapper input:focus {
+  border-color: #1677ff;
+
+  box-shadow:
+    0 0 0 4px rgba(22, 119, 255, 0.15);
+}
+
+/* =========================
+   PASSWORD BUTTON
+========================= */
+
+.toggle-password {
+  position: absolute;
+
+  top: 50%;
+  right: 14px;
+
+  transform: translateY(-50%);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 24px;
+  height: 24px;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  color: #94a3b8;
+
+  font-size: 16px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+/* Hover */
+
+.toggle-password:hover {
+  color: #1677ff;
+
+  transform:
+    translateY(-50%)
+    scale(1.05);
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.btn-cadastrar {
+  width: 100%;
+
+  margin-top: 10px;
+  padding: 15px;
+
+  border: none;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #1d84ff,
+      #1677ff
+    );
+
+  color: #ffffff;
+
+  font-size: 16px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  box-shadow:
+    0 10px 20px rgba(22, 119, 255, 0.22);
+
+  transition:
+    transform 0.2s ease,
+    filter 0.2s ease;
+}
+
+/* Hover */
+
+.btn-cadastrar:hover {
+  transform: translateY(-2px);
+
+  filter: brightness(1.03);
+}
+
+/* Active */
+
+.btn-cadastrar:active {
+  transform: translateY(0);
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.footer-link {
+  margin-top: 28px;
+
+  text-align: center;
+
+  color: #64748b;
+
+  font-size: 14px;
+}
+
+.footer-link a {
+  margin-left: 4px;
+
+  color: #1677ff;
+
+  text-decoration: none;
+
+  font-weight: 700;
+
+  transition: opacity 0.2s ease;
+}
+
+.footer-link a:hover {
+  opacity: 0.8;
+}
+
+/* =========================
+   AUTH ANIMATION
+========================= */
+
+.cadastro-container {
+  transition:
+    opacity 0.25s ease,
+    transform 0.25s ease;
+
+  width: 100%;
+  max-width: 460px;
+}
+
+/* Escondido */
+
+.hidden {
+  opacity: 0;
+
+  transform: translateY(10px);
+
+  pointer-events: none;
+
+  position: absolute;
+}
+
+/* Visível */
+
+.visible {
+  opacity: 1;
+
+  transform: translateY(0);
+
+  pointer-events: all;
+
+  position: relative;
+}
