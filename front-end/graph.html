@@ -18,49 +18,49 @@
 
 <body>
 
-<div class="wrapper">
+  <div class="wrapper">
 
-  <!-- SIDEBAR -->
-  <aside class="sidebar">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
 
-    <div class="sidebar-mini">
+      <div class="sidebar-mini">
 
-      <div class="top-mini">
+        <div class="top-mini">
 
-        <div class="logo">
+          <div class="logo">
 
-          <img src="icons/windows-logo.png" alt="">
+            <img src="icons/windows-logo.png" alt="">
+
+          </div>
+
+          <div class="icon-group">
+
+            <!-- GRAPH ACTIVE -->
+            <div class="icon active">
+
+              <img src="icons/graph.png" alt="">
+
+            </div>
+
+            <div class="icon" data-page="lista.html">
+
+              <img src="icons/dashboard-interface.png" alt="">
+
+            </div>
+
+          </div>
 
         </div>
 
         <div class="icon-group">
 
-          <!-- GRAPH ACTIVE -->
-          <div class="icon active">
-
-            <img src="icons/graph.png" alt="">
-
-          </div>
-
-          <div class="icon" data-page="lista.html">
-
-            <img src="icons/dashboard-interface.png" alt="">
-
-          </div>
-
-        </div>
-
-      </div>
-
-      <div class="icon-group">
-
-           <div class="icon" data-page="notifications.html">
+          <div class="icon" data-page="notifications.html">
 
             <img src="icons/bell.png" alt="">
 
           </div>
 
-            <div class="icon" data-page="dashboard.html">
+          <div class="icon" data-page="dashboard.html">
             <img src="icons/settings.png" alt="">
           </div>
 
@@ -70,155 +70,205 @@
 
           </div>
 
-      </div>
-
-    </div>
-
-    <div class="sidebar-content">
-
-      <div class="menu-btn">
-
-        <img src="icons/button.png" alt="">
+        </div>
 
       </div>
 
-      <div class="nav">
+      <div class="sidebar-content">
 
-        <div class="nav-item active">
+        <div class="menu-btn">
 
-          <img src="icons/graph.png" class="menu-icon" alt="">
+          <img src="icons/button.png" alt="">
 
-          <span>Análise</span>
+        </div>
+
+        <div class="nav">
+
+          <div class="nav-item active">
+
+            <img src="icons/graph.png" class="menu-icon" alt="">
+
+            <span>Análise</span>
+
+          </div>
 
         </div>
 
       </div>
 
-    </div>
+    </aside>
 
-  </aside>
+    <!-- MAIN -->
+    <main class="main">
 
-  <!-- MAIN -->
-  <main class="main">
+      <div class="topbar">
 
-    <div class="topbar">
-
-      <h1 class="title">
-        Análise Dashboard
-      </h1>
-
-    </div>
-
-    <!-- CARDS -->
-    <div class="products-stats">
-
-      <div class="product-card">
-
-        <div class="product-card-top">
-
-          <span>Vendas Hoje</span>
-
-          <img src="icons/pulse.png" alt="">
-
-        </div>
-
-        <h2>R$ 0</h2>
+        <h1 class="title">
+          Dashboard
+        </h1>
 
       </div>
 
-      <div class="product-card">
+      <!-- CARDS -->
+      <div class="products-stats">
 
-        <div class="product-card-top">
+        <div class="product-card">
 
-          <span>Pedidos</span>
+          <div class="product-card-top">
 
-          <img src="icons/folder.png" alt="">
+            <span>Vendas Hoje</span>
 
-        </div>
+            <img src="icons/pulse.png" alt="">
 
-        <h2>0</h2>
+          </div>
 
-      </div>
-
-      <div class="product-card">
-
-        <div class="product-card-top">
-
-          <span>Clientes Online</span>
-
-          <img src="icons/users.png" alt="">
+          <h2>R$ 0</h2>
 
         </div>
 
-        <h2>0</h2>
+        <div class="product-card">
+
+          <div class="product-card-top">
+
+            <span>Pedidos</span>
+
+            <img src="icons/folder.png" alt="">
+
+          </div>
+
+          <h2>0</h2>
+
+        </div>
+
+        <div class="product-card">
+
+          <div class="product-card-top">
+
+            <span>Clientes Online</span>
+
+            <img src="icons/users.png" alt="">
+
+          </div>
+
+          <h2>0</h2>
+
+        </div>
 
       </div>
 
-    </div>
+      <!-- TABELA -->
+      <div class="table-container">
 
-    <!-- TABELA -->
-    <div class="table-container">
+        <table>
 
-      <table>
+          <thead>
 
-        <thead>
+            <tr>
 
-          <tr>
+              <th>Comida</th>
+              <th>Vendas</th>
+              <th>Receita</th>
+              <th>Status</th>
 
-            <th>Produto</th>
-            <th>Vendas</th>
-            <th>Receita</th>
-            <th>Status</th>
+            </tr>
 
-          </tr>
+          </thead>
 
-        </thead>
+          <tbody>
 
-        <tbody>
+            <tr>
 
-          <tr>
+              <td>
 
-            <td>
+                <div class="user">
 
-              <div class="user">
+                  <div class="avatar">
+                    S
+                  </div>
 
-                <div class="avatar">
-                  S
+                  Sorvete
                 </div>
 
-                Sorvete
-              </div>
+              </td>
 
-            </td>
+              <td>0</td>
 
-            <td>0</td>
+              <td>R$ 0</td>
 
-            <td>R$ 0</td>
+              <td class="status">
+                Status
+              </td>
 
-            <td class="status">
-              Em Alta
-            </td>
+            </tr>
 
-          </tr>
+            <tr>
 
-        </tbody>
+              <td>
 
-      </table>
+                <div class="user">
+
+                  <div class="avatar">
+                    B
+                  </div>
+
+                  Burguer
+                </div>
+
+              </td>
+
+              <td>0</td>
+
+              <td>R$ 0</td>
+
+              <td class="status">
+                Status
+              </td>
+
+            </tr>
+
+                        <tr>
+
+              <td>
+
+                <div class="user">
+
+                  <div class="avatar">
+                    P
+                  </div>
+
+                  Pizza
+                </div>
+
+              </td>
+
+              <td>0</td>
+
+              <td>R$ 0</td>
+
+              <td class="status">
+                Status
+              </td>
+
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+
+    </main>
+
+    <!-- HELP BUTTON -->
+    <div class="floating-help">
+
+      <img src="icons/question-mark.png" alt="">
 
     </div>
-
-  </main>
-
-  <!-- HELP BUTTON -->
-  <div class="floating-help">
-
-    <img src="icons/question-mark.png" alt="">
 
   </div>
 
-</div>
-
-<script src="scripts/script_products.js"></script>
+  <script src="scripts/script_products.js"></script>
 
 </body>
 
