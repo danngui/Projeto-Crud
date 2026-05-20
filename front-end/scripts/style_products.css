@@ -1007,3 +1007,24 @@ tbody td{
 .details-btn:hover{
   background:#dbeafe;
 }
+
+/* PAGE TRANSITION */
+
+.main{
+  opacity:0;
+  animation:contentIn .45s ease forwards;
+}
+
+@keyframes contentIn{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+    filter:blur(6px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+    filter:blur(0);
+  }
+}

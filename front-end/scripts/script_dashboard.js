@@ -50,4 +50,22 @@ document.addEventListener("click", () => {
     menu.classList.remove("active")
   })
 
+/* PAGE TRANSITION */
+
+document.querySelectorAll("[data-page]").forEach((item) => {
+
+  item.addEventListener("click", function (e) {
+
+    e.preventDefault();
+
+    const target = this.getAttribute("data-page");
+
+    if (!target) return;
+
+    window.location.href = target;
+
+  });
+
+});
+
 })
