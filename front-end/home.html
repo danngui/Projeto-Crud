@@ -26,6 +26,15 @@
     href="scripts/style_home.css"
   />
 
+<script>
+  const user = localStorage.getItem("user");
+
+  // Se já estiver logado, pula o login
+  if (user) {
+    window.location.href = "dashboard.html";
+  }
+</script>
+
 </head>
 
 <body>
@@ -273,6 +282,7 @@
 
   <!-- JavaScript -->
   <script src="scripts/script_home.js"></script>
+  <script src="scripts/script_navigation.js"></script>
 
 </body>
 

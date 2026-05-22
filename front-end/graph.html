@@ -35,7 +35,6 @@
 
           <div class="icon-group">
 
-            <!-- GRAPH ACTIVE -->
             <div class="icon active">
 
               <img src="icons/graph.png" alt="">
@@ -61,7 +60,9 @@
           </div>
 
           <div class="icon" data-page="dashboard.html">
+
             <img src="icons/settings.png" alt="">
+
           </div>
 
           <div class="icon" data-page="usuario.html">
@@ -122,7 +123,7 @@
 
           </div>
 
-          <h2>R$ 0</h2>
+          <h2 id="totalReceita">R$ 0,00</h2>
 
         </div>
 
@@ -136,7 +137,7 @@
 
           </div>
 
-          <h2>0</h2>
+          <h2 id="totalPedidos">0</h2>
 
         </div>
 
@@ -150,7 +151,7 @@
 
           </div>
 
-          <h2>0</h2>
+          <h2 id="clientesOnline">0</h2>
 
         </div>
 
@@ -174,82 +175,7 @@
 
           </thead>
 
-          <tbody>
-
-            <tr>
-
-              <td>
-
-                <div class="user">
-
-                  <div class="avatar">
-                    S
-                  </div>
-
-                  Sorvete
-                </div>
-
-              </td>
-
-              <td>0</td>
-
-              <td>R$ 0</td>
-
-              <td class="status">
-                Status
-              </td>
-
-            </tr>
-
-            <tr>
-
-              <td>
-
-                <div class="user">
-
-                  <div class="avatar">
-                    B
-                  </div>
-
-                  Burguer
-                </div>
-
-              </td>
-
-              <td>0</td>
-
-              <td>R$ 0</td>
-
-              <td class="status">
-                Status
-              </td>
-
-            </tr>
-
-                        <tr>
-
-              <td>
-
-                <div class="user">
-
-                  <div class="avatar">
-                    P
-                  </div>
-
-                  Pizza
-                </div>
-
-              </td>
-
-              <td>0</td>
-
-              <td>R$ 0</td>
-
-              <td class="status">
-                Status
-              </td>
-
-            </tr>
+          <tbody id="graphTableBody">
 
           </tbody>
 
@@ -259,7 +185,7 @@
 
     </main>
 
-    <!-- HELP BUTTON -->
+    <!-- HELP -->
     <div class="floating-help">
 
       <img src="icons/question-mark.png" alt="">
@@ -268,7 +194,8 @@
 
   </div>
 
-  <script src="scripts/script_products.js"></script>
+  <script src="scripts/script_graph.js"></script>
+  <script src="scripts/script_navigation.js"></script>
 
 </body>
 

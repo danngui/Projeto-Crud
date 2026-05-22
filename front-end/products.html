@@ -45,7 +45,7 @@
 
       <label>Nome do Produto</label>
 
-      <input type="text" placeholder="Produto">
+      <input type="text" id="nomeProduto" placeholder="Produto">
 
     </div>
 
@@ -55,7 +55,7 @@
 
       <div class="select-wrapper">
 
-        <select>
+        <select id="categoriaProduto">
 
           <option>Sobremesa</option>
           <option>Lanche</option>
@@ -71,15 +71,20 @@
 
       <label>Preço</label>
 
-      <input type="text" placeholder="R$ 99,90">
+      <input type="text" id="precoProduto" placeholder="R$ 99,90">
 
     </div>
+
+    <div class="input-group">
+  <label>Descrição</label>
+  <input id="descricaoProduto" placeholder="Descrição do produto"></input>
+</div>
 
     <div class="input-group">
 
       <label>Quantidade em Estoque</label>
 
-      <input type="number" placeholder="50">
+      <input type="number" id="estoqueProduto" placeholder="50">
 
     </div>
 
@@ -246,7 +251,7 @@
 
       </div>
 
-      <h2>0</h2>
+      <h2 id="totalProdutos">0</h2>
 
     </div>
 
@@ -260,7 +265,7 @@
 
       </div>
 
-      <h2>0</h2>
+     <h2 id="produtosAtivos">0</h2>
 
     </div>
 
@@ -274,7 +279,7 @@
 
       </div>
 
-      <h2>0</h2>
+      <h2 id="semEstoque">0</h2>
 
     </div>
 
@@ -502,6 +507,7 @@
   </div>
 
 <script src="scripts/script_products.js"></script>
+<script src="scripts/script_navigation.js"></script>
 
 </body>
 

@@ -18,46 +18,31 @@ const openCadastro =
    TOGGLE PASSWORD
 ========================= */
 
-function setupPasswordToggle(
-  inputId,
-  buttonId
-) {
+function setupPasswordToggle(inputId, buttonId) {
 
-  const input =
-    document.getElementById(inputId);
+  const input = document.getElementById(inputId);
+  const button = document.getElementById(buttonId);
 
-  const button =
-    document.getElementById(buttonId);
+  if (input && button) {
+    button.addEventListener("click", () => {
 
-  button.addEventListener("click", () => {
+      const isPassword = input.type === "password";
 
-    const isPassword =
-      input.type === "password";
+      input.type = isPassword ? "text" : "password";
 
-    input.type =
-      isPassword ? "text" : "password";
+      button.innerHTML = isPassword
+        ? '<i class="fa-regular fa-eye-slash"></i>'
+        : '<i class="fa-regular fa-eye"></i>';
 
-    button.innerHTML = isPassword
-      ? '<i class="fa-regular fa-eye-slash"></i>'
-      : '<i class="fa-regular fa-eye"></i>';
-
-  });
-
+    });
+  }
 }
 
 /* Cadastro */
-
-setupPasswordToggle(
-  "senha",
-  "toggleSenha"
-);
+setupPasswordToggle("senha", "toggleSenha");
 
 /* Login */
-
-setupPasswordToggle(
-  "login-senha",
-  "toggleLoginSenha"
-);
+setupPasswordToggle("login-senha", "toggleLoginSenha");
 
 /* =========================
    TROCAR TELAS
@@ -70,7 +55,6 @@ function showLogin() {
 
   loginBox.classList.remove("hidden");
   loginBox.classList.add("visible");
-
 }
 
 function showCadastro() {
@@ -80,7 +64,6 @@ function showCadastro() {
 
   cadastroBox.classList.remove("hidden");
   cadastroBox.classList.add("visible");
-
 }
 
 /* =========================
@@ -88,19 +71,13 @@ function showCadastro() {
 ========================= */
 
 openLogin.addEventListener("click", (e) => {
-
   e.preventDefault();
-
   showLogin();
-
 });
 
 openCadastro.addEventListener("click", (e) => {
-
   e.preventDefault();
-
   showCadastro();
-
 });
 
 /* =========================
@@ -108,46 +85,100 @@ openCadastro.addEventListener("click", (e) => {
 ========================= */
 
 cadastroBox.classList.add("visible");
-
 loginBox.classList.add("hidden");
 
 /* =========================
-   LOGIN
+   LOGIN REAL (PHP + MYSQL)
 ========================= */
 
 const loginForm =
   loginBox.querySelector("form");
 
-loginForm.addEventListener("submit", (e) => {
+loginForm.addEventListener("submit", async (e) => {
 
   e.preventDefault();
 
   const email =
-    document
-      .getElementById("login-email")
-      .value;
+    document.getElementById("login-email").value;
 
   const senha =
-    document
-      .getElementById("login-senha")
-      .value;
+    document.getElementById("login-senha").value;
 
-  /* Credenciais */
+  try {
 
-  if (
-    email === "admin@gmail.com" &&
-    senha === "admin"
-  ) {
+    const res = await fetch("http://localhost/Projeto-Crud/back-end/scripts/login.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ email, senha })
+    });
 
-    /* Redirecionar */
+    const data = await res.json();
 
-    window.location.href =
-      "dashboard.html";
+    if (data.erro) {
+      alert(data.erro);
+      return;
+    }
 
-  } else {
+    // salva usuário
+    localStorage.setItem("user", JSON.stringify(data));
 
-    alert("E-mail ou senha inválidos.");
+    // redireciona
+    window.location.href = "dashboard.html";
 
+  } catch (err) {
+    console.error(err);
+    alert("Erro ao conectar com o servidor");
+  }
+
+});
+
+/* =========================
+   CADASTRO REAL (PHP + MYSQL)
+========================= */
+
+const cadastroForm =
+  cadastroBox.querySelector("form");
+
+cadastroForm.addEventListener("submit", async (e) => {
+
+  e.preventDefault();
+
+  const nome =
+    document.getElementById("nome").value;
+
+  const email =
+    document.getElementById("email").value;
+
+  const senha =
+    document.getElementById("senha").value;
+
+  try {
+
+    const res = await fetch("http://localhost/Projeto-Crud/back-end/scripts/cadastro.php", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({ nome, email, senha })
+    });
+
+    const data = await res.json();
+
+    if (data.erro) {
+      alert(data.erro);
+      return;
+    }
+
+    alert("Cadastro realizado com sucesso!");
+
+    // muda pra login
+    showLogin();
+
+  } catch (err) {
+    console.error(err);
+    alert("Erro no cadastro");
   }
 
 });

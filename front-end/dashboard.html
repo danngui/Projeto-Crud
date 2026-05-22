@@ -47,7 +47,7 @@
 
         <label>Nome</label>
 
-        <input type="text" placeholder="Daniel">
+        <input type="text" id="nome" placeholder="Daniel">
 
       </div>
 
@@ -55,7 +55,7 @@
 
         <label>Sobrenome</label>
 
-        <input type="text" placeholder="Guilherme">
+        <input type="text" id="sobrenome" placeholder="Guilherme">
 
       </div>
 
@@ -63,7 +63,7 @@
 
         <label>Email</label>
 
-        <input type="email" placeholder="daniel.guilherme@exemplo.com">
+        <input type="email" id="email" placeholder="daniel.guilherme@exemplo.com">
 
       </div>
 
@@ -304,45 +304,7 @@
 
           </thead>
 
-          <tbody>
-
-            <tr>
-
-              <td>
-
-                <div class="user">
-
-                  <div class="avatar">
-                    H
-                  </div>
-
-                  Usuário 1
-
-                </div>
-
-              </td>
-
-              <td>usuario@gmail.com</td>
-
-              <td class="status">
-                Ativo
-              </td>
-
-              <td>20 de Maio, 2026</td>
-
-              <td class="dots">
-
-                <img src="icons/dots.png" class="dots-icon" alt="">
-
-                <div class="action-menu">
-
-                  <button class="action-item">
-                    Editar
-                  </button>
-
-                  <button class="action-item">
-                    Deletar
-                  </button>
+<tbody id="tbodyUsuarios"></tbody>
 
                 </div>
 
@@ -367,6 +329,7 @@
   </div>
 
   <script src="scripts/script_dashboard.js"></script>
+  <script src="scripts/script_navigation.js"></script>
 
 </body>
 
